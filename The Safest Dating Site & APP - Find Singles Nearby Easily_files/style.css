@@ -3549,7 +3549,7 @@ footer .copyright p {
 }
 .profiles-single__info {
 	width: calc(100% - 270px);
-	padding: 0 5% 32px;
+	padding: 0 0 56px 28px;
 	position: relative;
 }
 .profiles_area .profiles .profiles-single__topline {
@@ -4881,6 +4881,9 @@ footer .copyright p {
 	}
 	.profile-info .profile-info__row .sm-fw {
 		width: 100%;
+	}
+	.profiles-single__info {
+		padding: 0 0 56px 18px;
 	}
 }
 @media screen and (max-width: 700px) {
