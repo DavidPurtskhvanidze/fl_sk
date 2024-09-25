@@ -1601,6 +1601,10 @@ footer .copyright p {
 	left: 0;
 	bottom: 0;
 }
+.people {
+	background-color: #f6f6f6;
+	padding-top: 100px;
+}
 .people .persons {
 	display: flex;
 	flex-wrap: wrap;
@@ -3519,9 +3523,13 @@ footer .copyright p {
 }
 .profiles_area .profiles .profiles-single {
 	display: flex;
-	flex-direction: column;
-	width: calc(25% - 30px);
-	margin: 0 15px 60px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	max-width: 960px;
+	margin: 0 auto 32px;
+	padding: 16px;
+	background-color: #fff;
+	border-radius: 4px;
 }
 .profiles_area .profiles .profiles-single[hidden] {
 	display: none;
@@ -3529,9 +3537,8 @@ footer .copyright p {
 .profiles_area .profiles .profiles-single__photo {
 	display: flex;
 	flex-direction: column;
-	width: 100%;
-	height: 300px;
-	margin-bottom: 25px;
+	width: 270px;
+	height: 270px;
 	transition: 0.3s opacity;
 	background-size: cover;
 	background-position: top center;
@@ -3540,29 +3547,61 @@ footer .copyright p {
 .profiles_area .profiles .profiles-single__photo:hover {
 	opacity: 0.8;
 }
+.profiles-single__info {
+	width: calc(100% - 270px);
+	padding: 0 5% 32px;
+	position: relative;
+}
 .profiles_area .profiles .profiles-single__topline {
 	display: flex;
-	margin: 0 0 15px;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 2px 0 6px;
 }
 .profiles_area .profiles .profiles-single__topline .topline__namecol {
-	width: calc(100% - 60px);
+	flex: 1;
+}
+.profiles_area .profiles .profiles-single__topline .topline__verification {
+	content: '';
+	display: inline-block;
+	background-image: url("data:image/svg+xml,%3Csvg width='23' height='25' viewBox='0 0 23 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.9363 0.616649C10.7592 0.687508 10.0767 1.13998 9.41976 1.6222L8.22515 2.49902H6.59106C4.84743 2.49902 4.30828 2.64317 4.01727 3.18719C3.93492 3.34095 3.6577 4.11621 3.40117 4.90986L2.93491 6.35301L1.5522 7.36722C-0.247006 8.68705 -0.273241 8.77035 0.423453 10.9436L0.924202 12.5059L0.423453 14.0682C-0.273241 16.2414 -0.247006 16.3247 1.5522 17.6445L2.93491 18.6587L3.40117 20.1019C3.6577 20.8956 3.93492 21.6708 4.01727 21.8246C4.30828 22.3686 4.84743 22.5127 6.59106 22.5127H8.22515L9.41638 23.387C10.7665 24.3781 11.2149 24.587 11.7423 24.4712C11.9454 24.4266 12.7062 23.9677 13.433 23.4514L14.7546 22.5127H16.3601C18.7238 22.5127 18.7867 22.4637 19.5601 20.011L19.9865 18.6587L21.3696 17.6445C23.1695 16.3247 23.1957 16.2417 22.4989 14.0682L21.9981 12.5059L22.4989 10.9436C23.1957 8.77008 23.1695 8.68705 21.3696 7.36722L19.9865 6.35301L19.5601 5.00073C18.7855 2.54459 18.7269 2.49902 16.3386 2.49902H14.7116L13.5191 1.62694C11.9597 0.486694 11.6063 0.348492 10.9363 0.616649ZM12.6145 10.7479C11.3426 12.0123 10.2475 13.0468 10.1808 13.0468C10.1143 13.0468 9.56094 12.56 8.95133 11.965C8.34186 11.37 7.76551 10.8831 7.67072 10.8831C7.44232 10.8831 6.05204 12.2794 6.05204 12.5086C6.05204 12.8149 9.8629 16.5627 10.1742 16.5627C10.36 16.5627 11.5358 15.4779 13.6624 13.3446C15.4267 11.5746 16.8703 10.0665 16.8703 9.99308C16.8703 9.75197 15.4477 8.44904 15.1844 8.44904C15.0321 8.44904 13.9828 9.38766 12.6145 10.7479Z' fill='%2324A2F7'/%3E%3C/svg%3E%0A");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 23px;
+	height: 25px;
+	margin-right: 8px;
 }
 .profiles_area .profiles .profiles-single__topline .topline__name {
-	font: normal 700 22px / 28px "Montserrat", sans-serif;
+	font: normal 700 22px / 22px "Montserrat", sans-serif;
 	color: #314a5b;
 	text-transform: uppercase;
 	margin: 0 0 3px;
 	word-break: break-word;
 	transition: 0.3s opacity;
+	position: relative;
+	padding-right: 20px;
+}
+.profiles_area .profiles .profiles-single__topline .topline__name:after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	background-color: #ACACAC;
+	opacity: 0.5;
+	border-radius: 50%;
+	top: 9px;
+	right: 4px;
 }
 .profiles_area .profiles .profiles-single__topline .topline__name:hover {
 	opacity: 0.8;
 }
-.profiles_area .profiles .profiles-single__topline .topline__status {
+.profiles_area .profiles .topline__status {
 	font: normal 400 13px / 16px "Open Sans", sans-serif;
 	color: #314a5b;
 }
-.profiles_area .profiles .profiles-single__topline .topline__status.on {
+.profiles_area .profiles .topline__status.on {
 	font-weight: 700;
 	/*color: #fa5c65;*/
 	color: #4fcc53;
@@ -3574,7 +3613,7 @@ footer .copyright p {
 .profiles_area .profiles .profiles-single__topline .topline__photocol p {
 	position: relative;
 	padding-left: 30px;
-	margin: 5px 0 auto auto;
+	margin: auto;
 	font: normal 400 16px / 16px "Open Sans", sans-serif;
 	color: #888888;
 }
@@ -3585,25 +3624,49 @@ footer .copyright p {
 	top: 0;
 	width: 19px;
 	height: 15px;
-	background-image: url("img/camera.png");
+	background-image: url("https://flisk.dating/img/camera.png");
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 }
 .profiles_area .profiles .profiles-single__basic {
-	margin: 0 0 10px;
+	margin: 14px 0;
 	font: normal 400 14px / 18px "Open Sans", sans-serif;
-	color: #314a5b;
+	color: #314A5B;
+}
+.profiles_area .profiles .profiles-single__desc {
+	margin: 0 0 46px;
+	font: normal 400 14px / 18px "Open Sans", sans-serif;
+	color: #000000;
 }
 .profiles_area .profiles .profiles-single__additional {
-	margin: 0 0 20px;
+	margin: 0 0 6px;
 	font: normal 400 14px / 18px "Open Sans", sans-serif;
 	color: #9aa0ab;
 }
+.profiles_area .profiles .profiles-single__additional a:first-child {
+	position: relative;
+	padding-right: 16px;
+}
+.profiles_area .profiles .profiles-single__additional a:first-child:after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	width: 4px;
+	height: 4px;
+	background-color: #ACACAC;
+	opacity: 0.5;
+	border-radius: 50%;
+	top: 6px;
+	right: 4px;
+}
 .profiles_area .profiles .profiles-single__chat {
-	display: block;
-	width: 100%;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: inline-block;
 	height: 45px;
+	padding: 0 17%;
 	margin: auto 0 0;
 	border-radius: 6px;
 	font: normal 700 15px / 45px "Montserrat", sans-serif;
@@ -4519,9 +4582,6 @@ footer .copyright p {
 		text-align: center;
 	}
 
-	.profiles_area .profiles .profiles-single {
-		width: calc(33.33333% - 30px);
-	}
 	.profile-similar .profiles_area .profiles .profiles-single:nth-child(4) {
 		display: none;
 	}
@@ -5226,8 +5286,19 @@ footer .copyright p {
 		margin: 0 -10px;
 	}
 	.profiles_area .profiles .profiles-single {
-		width: calc(50% - 20px);
-		margin: 0 10px 40px;
+		flex-direction: column;
+	}
+	.profiles_area .profiles .profiles-single__photo {
+		width: 100%;
+		height: 300px;
+		margin-bottom: 16px;
+	}
+	.profiles-single__info {
+		width: 100%;
+		padding: 0 0 32px;
+	}
+	.profiles_area .profiles .profiles-single__chat {
+		width: 100%;
 	}
 	.profile-similar .profiles_area .profiles .profiles-single:nth-child(3) {
 		display: none;
