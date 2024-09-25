@@ -3553,7 +3553,7 @@ footer .copyright p {
 	position: relative;
 }
 .profiles_area .profiles .profiles-single__topline {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	justify-content: flex-start;
 	margin: 2px 0 6px;
